@@ -7,12 +7,11 @@ function useForm({ initialValues, validate = noValidation, onSubmit }) {
   const [errors, setErrors] = useState({})
   const [isValid, setIsValid] = useState(true)
 
-  const handleChange = event => {
+  const handleChange = ({ target: { name, type, value, checked } }) =>
     setValues({
       ...values,
-      [event.target.name]: event.target.value
+      [name]: type === 'checkbox' ? checked : value
     })
-  }
 
   const handleSubmit = event => {
     const errors = validate(values)
