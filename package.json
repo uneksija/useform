@@ -1,0 +1,27 @@
+{
+  "name": "@uneksija/useform",
+  "version": "0.1.0",
+  "description": "Form react hook",
+  "main": "index.js",
+  "scripts": {
+    "test": "false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uneksija/useform.git"
+  },
+  "keywords": [
+    "forms",
+    "react",
+    "react-hooks"
+  ],
+  "author": "uneksija",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uneksija/useform/issues"
+  },
+  "homepage": "https://github.com/uneksija/useform#readme",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  }
+}
