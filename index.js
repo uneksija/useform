@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const noValidation = () => {}
+const noValidation = () => ({})
 
 function useForm({ initialValues, validate = noValidation, onSubmit }) {
   const [values, setValues] = useState(initialValues)
