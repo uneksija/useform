@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const noValidation = () => ({})
 
@@ -7,6 +7,13 @@ function useForm({ initialValues, validate = noValidation, onSubmit }) {
   const [errors, setErrors] = useState({})
   const [isValid, setIsValid] = useState(true)
 
+  useEffect(() => {
+    const errors = validate(values)
+    setErrors(errors)
+    const isValid = Object.keys(errors).length === 0
+    setIsValid(isValid)
+  }, [values])
+
   const handleChange = ({ target: { name, type, value, checked } }) =>
     setValues({
       ...values,
@@ -14,11 +21,6 @@ function useForm({ initialValues, validate = noValidation, onSubmit }) {
     })
 
   const handleSubmit = event => {
-    const errors = validate(values)
-    setErrors(errors)
-    const isValid = Object.keys(errors).length === 0
-    setIsValid(isValid)
-
     if (isValid) onSubmit(values)
     event.preventDefault()
     return false
