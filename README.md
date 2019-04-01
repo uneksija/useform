@@ -1,6 +1,6 @@
 # useform
 
-React hook for simple control of forms
+React hook for simple form control
 
 ![npm (scoped)](https://img.shields.io/npm/v/@uneksija/useform.svg)
 ![GitHub](https://img.shields.io/github/license/uneksija/useform.svg)
