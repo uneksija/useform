@@ -19,8 +19,10 @@ function useForm({ initialValues, validate, onSubmit }) {
     if (typeof validate !== 'function') return
     const errors = validate(values)
     setErrors(errors)
-    const isValid = Object.keys(errors).length === 0
-    setIsValid(isValid)
+    if (errors) {
+      const isValid = Object.keys(errors).length === 0
+      setIsValid(isValid)
+    }
   }, [values, validate])
 
   const handleChange = ({ target: { name, type, value, checked } }) =>

@@ -22,7 +22,6 @@ import useForm from '@uneksija/useform'
 ```js
 function validate({ age }) {
   if (age < 18) return { age: '18+ only' }
-  return {}
 }
 
 function App() {
