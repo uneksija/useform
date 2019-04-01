@@ -4,7 +4,17 @@
   "description": "Form react hook",
   "main": "index.js",
   "scripts": {
-    "test": "false"
+    "build": "pack build"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,5 +33,10 @@
   "homepage": "https://github.com/uneksija/useform#readme",
   "peerDependencies": {
     "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.3.6",
+    "@pika/plugin-build-web": "^0.3.14",
+    "@pika/plugin-standard-pkg": "^0.3.14"
   }
 }
