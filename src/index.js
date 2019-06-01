@@ -16,6 +16,10 @@ function useForm({ initialValues, validate, onSubmit }) {
   const [isValid, setIsValid] = useState(true)
 
   useEffect(() => {
+    setValues(initialValues)
+  }, [initialValues])
+
+  useEffect(() => {
     if (typeof validate !== 'function') return
     const errors = validate(values)
     setErrors(errors)
