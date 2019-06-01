@@ -1,6 +1,6 @@
 {
   "name": "@uneksija/useform",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "React hook for simple form control",
   "main": "index.js",
   "scripts": {
