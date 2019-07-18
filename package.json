@@ -35,7 +35,7 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@pika/pack": "^0.3.6",
+    "@pika/pack": "^0.3.7",
     "@pika/plugin-build-web": "^0.3.14",
     "@pika/plugin-standard-pkg": "^0.3.14"
   }
